@@ -179,4 +179,4 @@ class Materials extends Migration
         $this->forge->dropTable('g_materials_files', true);
         $this->db->query("DROP VIEW IF EXISTS v_g_materials");
     }
-} 
+}

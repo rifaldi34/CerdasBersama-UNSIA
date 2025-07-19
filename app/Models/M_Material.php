@@ -18,9 +18,9 @@ class M_Material extends Model
     {
         $offset = ($page - 1) * $limit;
 
-        // 1) Build the query off the V_G_MATERIALS view
+        // 1) Build the query off the v_g_materials view
         $builder = $this->db
-                        ->table('V_G_MATERIALS')
+                        ->table('v_g_materials')
                         ->where('status', $status);
 
         if (! empty($user_id)) {
@@ -76,4 +76,4 @@ class M_Material extends Model
 
 
     // Add more helper methods as needed
-} 
+}
