@@ -35,5 +35,12 @@ RUN composer install --no-dev --optimize-autoloader
 # Set permissions for writable directory
 RUN chown -R www-data:www-data /var/www/html/writable
 
+# Set Apache DocumentRoot to public/
+RUN sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html/public|g' /etc/apache2/sites-available/000-default.conf \
+    && sed -i 's|<Directory /var/www/html>|<Directory /var/www/html/public>|g' /etc/apache2/apache2.conf
+
+# Set permissions for public directory
+RUN chown -R www-data:www-data /var/www/html/public
+
 # Expose port 80
 EXPOSE 80
