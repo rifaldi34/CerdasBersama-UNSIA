@@ -53,7 +53,10 @@ class GroupTables extends Migration
         // - cannot edit the content itself
         $adminPerms = [
             'material.changeStatus',   // e.g. approve/reject others' materials
-            'comment.add'              // (unchanged)
+            'material.add',
+            'material.edit_own',
+            'material.delete_own',
+            'comment.add'
         ];
         $this->db->table('s_group')->insert([
             'group_id'     => 'admin',
