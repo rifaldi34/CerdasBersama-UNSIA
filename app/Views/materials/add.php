@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Materi Baru</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
+<?= view('materials/header_material') ?>
     <div class="container mt-4">
         <h1><?= isset($material) ? 'Edit Materi' : 'Tambah Materi Baru' ?></h1>
         <div class="alert alert-danger" id="error-alert" style="display:none;">
@@ -325,5 +316,5 @@
 
         });
     </script>
-</body>
-</html>
+
+<?= view('materials/footer_material') ?>
