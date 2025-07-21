@@ -36,7 +36,7 @@
           </div>
           <div class="form-group">
             <label for="login-password">Password</label>
-            <input type="password" name="password" id="login-password" class="form-control" placeholder="Password" required>
+            <input type="password" name="password" id="login-password" class="form-control" placeholder="Enter Password" required>
           </div>
           <button type="submit" class="btn btn-primary btn-block">Login</button>
         </form>
@@ -104,5 +104,16 @@
       });
     });
   </script>
+  <script src="<?= base_url('assets/swal/sweetalert2@11.js') ?>"></script>
+  <?php if (session()->getFlashdata('login_error')): ?>
+  <script>
+      Swal.fire({
+          icon: 'error',
+          title: 'Gagal Login',
+          text: '<?= session()->getFlashdata('login_error') ?>',
+          confirmButtonColor: '#d33'
+      });
+  </script>
+  <?php endif; ?>
 </body>
 </html>

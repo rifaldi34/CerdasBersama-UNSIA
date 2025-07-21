@@ -73,10 +73,12 @@ class Auth extends BaseController
                 $session->set('session_user_id', $admin_id);
                 return redirect()->to(base_url('Material'));
             } else {
-                echo 'Password incorrect';
+                session()->setFlashdata('login_error', 'Password salah!');
+                return redirect()->back()->withInput();
             }
         }else{
-            echo 'User Not Found';
+            session()->setFlashdata('login_error', 'User tidak ditemukan!');
+            return redirect()->back()->withInput();
         }
 
     }
