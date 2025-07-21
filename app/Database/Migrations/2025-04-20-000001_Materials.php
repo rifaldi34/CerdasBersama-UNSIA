@@ -106,27 +106,35 @@ class Materials extends Migration
         $now = date('Y-m-d H:i:s');
         $materials = [
             [
-                'title'           => 'Introduction to CodeIgniter 4',
-                'article_content' => 'This is a beginner guide to CodeIgniter 4 framework.',
-                'thumbnail_path'  => 'thumbnails/ci4_intro.webp',
+                'title'           => 'Pengenalan CodeIgniter 4',
+                'article_content' => 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.',
+                'thumbnail_path'  => 'uploads/thumbnails/ci_4_thumbnail.png',
                 'author_id'       => '019802752c807d339987f61e54b588af',
                 'status'          => 'approved',
                 'created'         => $now,
                 'updated'         => null,
             ],
             [
-                'title'           => 'Advanced PHP Techniques',
-                'article_content' => 'Deep dive into PHP OOP and design patterns.',
-                'thumbnail_path'  => 'thumbnails/php_advanced.png',
+                'title'           => 'Teknik PHP Lanjutan',
+                'article_content' => 'Pembahasan mendalam tentang OOP dan pola desain di PHP.',
+                'thumbnail_path'  => 'uploads/thumbnails/php-oops.jpg',
                 'author_id'       => '019802752c807d339987f61e54b588af',
                 'status'          => 'pending',
                 'created'         => date('Y-m-d H:i:s', strtotime('-2 days')),
                 'updated'         => date('Y-m-d H:i:s', strtotime('-1 day')),
             ],
             [
-                'title'           => 'Database Migrations with CI4',
-                'article_content' => 'Learn how to manage your database schema using migrations.',
-                'thumbnail_path'  => 'thumbnails/migrations.png',
+                'title'           => 'Migrasi Database dengan CI4',
+                'article_content' => 'Pelajari cara mengelola skema database menggunakan fitur migrasi.',
+                'thumbnail_path'  => 'uploads/thumbnails/database-migration.png',
                 'author_id'       => '019802752c807d339987f61e54b588af',
                 'status'          => 'rejected',
                 'created'         => date('Y-m-d H:i:s', strtotime('-5 days')),
@@ -149,9 +157,9 @@ class Materials extends Migration
         foreach ($inserted as $idx => $row) {
             $files[] = [
                 'material_id' => $row['id'],
-                'file_name'   => "file_{$row['id']}.pdf",
-                'file_path'   => "uploads/file_{$row['id']}.pdf",
-                'author_id'   => 'author' . ($idx + 1),
+                'file_name'   => "Pemrograman-Web-Menggunakan-Codeigniter-4-dan-Bootstrap_compressed.pdf",
+                'file_path'   => "uploads/Pemrograman-Web-Menggunakan-Codeigniter-4-dan-Bootstrap_compressed.pdf",
+                'author_id'   => '019802752c807d339987f61e54b588af',
                 'created'     => $now,
             ];
         }

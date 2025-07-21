@@ -19,23 +19,21 @@ if (! $isLoggedIn) {
     
     <h1><?= esc($material['title']) ?></h1>
 
-    <!-- Always show the teaser/full content -->
-    <div class="mb-4">
-        <div class="text-center">
+    <!-- Side-by-side on desktop, stacked on mobile -->
+    <div class="row mb-4 g-3 align-items-start">
+        <div class="col-md-4 text-center">
             <img 
                 src="<?= base_url('public/' . $material['thumbnail_path']) ?>" 
-                class="img-fluid" 
-                alt="<?= esc($material['title']) ?>" 
-                  style="
-                    border-radius: 10px;
-                    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-                    margin-bottom: 2rem;
-                "
+                class="img-fluid rounded shadow"
+                alt="<?= esc($material['title']) ?>"
+                style="max-height: 320px; object-fit: cover; width: 100%;"
             />
         </div>
-        <div class="card">
-            <div class="card-body shadow-lg">
-                <?= nl2br($article_content) ?>
+        <div class="col-md-8">
+            <div class="card h-100">
+                <div class="card-body shadow-lg">
+                    <?= nl2br($article_content) ?>
+                </div>
             </div>
         </div>
     </div>
