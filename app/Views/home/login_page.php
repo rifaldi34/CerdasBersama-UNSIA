@@ -27,7 +27,7 @@
     <div class="card-body">
       <!-- LOGIN FORM -->
       <div id="login-form">
-        <h3 class="text-center mb-4">Login To StudySpace</h3>
+        <h3 class="text-center mb-4">📚 Login To <br> <b>Cerdas Bersama-UNSIA</b></h3>
         <form action="<?= base_url('Auth/loginp') ?>" method="post">
           <?= csrf_field() ?>
           <div class="form-group">
