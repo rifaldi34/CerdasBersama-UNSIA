@@ -49,7 +49,7 @@
 
       <!-- REGISTER FORM -->
       <div id="register-form" style="display: none;">
-        <h3 class="text-center mb-4">Register for StudySpace</h3>
+        <h3 class="text-center mb-4">Register for Cerdas Bersama-UNSIA</h3>
         <!-- Display validation errors, if any -->
         <?php if (! empty($errors)): ?>
         <div class="alert alert-danger">

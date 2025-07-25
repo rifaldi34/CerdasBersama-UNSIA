@@ -119,19 +119,13 @@ class Auth extends BaseController
         if (empty($username) || empty($password) || empty($irl_name)) {
             $errors[] = 'All fields are required.';
         }
-        if (strlen($username) < 4) {
-            $errors[] = 'Username must be at least 4 characters.';
-        }
-        if (strlen($password) < 6) {
-            $errors[] = 'Password must be at least 6 characters.';
-        }
         // Check if username exists
         $exists = $this->db->table('s_user')->where('username', $username)->countAllResults();
         if ($exists > 0) {
             $errors[] = 'Username already taken.';
         }
         if ($errors) {
-            return view('home/register_page', ['errors' => $errors, 'old' => compact('username', 'irl_name')]);
+            echo json_encode($errors);exit;
         }
         // Create user
         $user_id = uuidv7();
